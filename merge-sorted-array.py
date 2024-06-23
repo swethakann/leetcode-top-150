@@ -25,14 +25,14 @@ class Solution:
 
 # Test cases
 test_cases = [
-    [[1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3],
-    [[1], 1, [], 0],
-    [[0], 0, [1], 1],
-    [[5, 6, 7, 0, 0, 0], 3, [1, 2, 3], 3]
+    [[1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3, [1, 2, 2, 3, 5, 6]],
+    [[1], 1, [], 0, [1]],
+    [[0], 0, [1], 1, [1]],
+    [[5, 6, 7, 0, 0, 0], 3, [1, 2, 3], 3, [1, 2, 3, 5, 6, 7]]
 ]
 
 solution = Solution()
 
-for i, (nums1, m, nums2, n) in enumerate(test_cases, 1):
+for i, (nums1, m, nums2, n, expected_result) in enumerate(test_cases, 1):
     solution.merge(nums1, m, nums2, n)
-    print(f"Test case {i} result: {nums1}")
+    print(f"Test case {i} result: {expected_result == nums1}")
