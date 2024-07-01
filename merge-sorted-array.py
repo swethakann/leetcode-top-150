@@ -1,5 +1,9 @@
 from typing import List
-
+"""
+Given two integer arrays nums1 and nums2, sorted in non-decreasing order,
+m and n represent the number of elements in nums1 and nums2 respectively.
+Merge nums1 and nums2.
+"""
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
